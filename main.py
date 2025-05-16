@@ -103,8 +103,7 @@ async def search_google_maps(page, location, rate_limiter):
         # Set a longer navigation timeout
         page.set_default_navigation_timeout(6000)  # 60 seconds
         
-        # Use domcontentloaded instead of networkidle for initial load
-        await page.goto("https://www.google.com/maps", wait_until="domcontentloaded")
+        await page.goto("https://www.google.com/maps")
         
         # Wait for the search box to be available
         await page.wait_for_selector("input[id='searchboxinput']", timeout=3000)

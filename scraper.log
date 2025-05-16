@@ -1,0 +1,186 @@
+2025-05-16 23:38:26,123 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-16 23:38:26,384 - INFO - Waiting for search results...
+2025-05-16 23:38:27,891 - INFO - Search results loaded
+2025-05-16 23:38:27,895 - INFO - Scrolling to load more hospital results...
+2025-05-16 23:38:27,895 - INFO - Scroll 1/5
+2025-05-16 23:38:30,129 - INFO - Scroll 2/5
+2025-05-16 23:38:32,832 - INFO - Scroll 3/5
+2025-05-16 23:38:35,653 - INFO - Scroll 4/5
+2025-05-16 23:38:38,033 - INFO - Scroll 5/5
+2025-05-16 23:38:40,261 - INFO - Found 23 hospital listings
+2025-05-16 23:38:40,292 - INFO - Added hospital: Liv Hospital
+2025-05-16 23:38:40,314 - INFO - Added hospital: Avicenna International Hospital
+2025-05-16 23:38:40,331 - INFO - Added hospital: Memorial Bahçelievler Hastanesi
+2025-05-16 23:38:40,342 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-16 23:38:40,356 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-16 23:38:40,369 - INFO - Added hospital: Acıbadem Hospital in Taksim
+2025-05-16 23:38:40,381 - INFO - Added hospital: Medical Park Bahçelievler Hospital
+2025-05-16 23:38:40,401 - INFO - Added hospital: Acıbadem International Hospital
+2025-05-16 23:38:40,414 - INFO - Added hospital: İ.A.Ü. VM Medical Park Florya Hastanesi
+2025-05-16 23:38:40,426 - INFO - Added hospital: Medivita İncirli Hastanesi
+2025-05-16 23:38:40,444 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-16 23:38:44,208 - INFO - Opening reviews for: Liv Hospital
+2025-05-16 23:38:44,210 - INFO - Searching for reviews section
+2025-05-16 23:38:47,211 - INFO - Trying to find Reviews tab...
+2025-05-16 23:38:47,246 - INFO - Found Reviews tab
+2025-05-16 23:38:49,325 - INFO - Scrolling to find reviews...
+2025-05-16 23:38:49,325 - INFO - Review scroll 1/5
+2025-05-16 23:38:52,258 - INFO - Review scroll 2/5
+2025-05-16 23:38:54,905 - INFO - Review scroll 3/5
+2025-05-16 23:38:57,542 - INFO - Review scroll 4/5
+2025-05-16 23:39:00,417 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:39:00,417 - INFO - Review scroll 5/5
+2025-05-16 23:39:03,207 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:39:03,214 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:39:03,219 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:39:03,738 - INFO - Extracted 30 valid reviews for Liv Hospital
+2025-05-16 23:39:03,741 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Liv_Hospital_reviews.csv
+2025-05-16 23:39:13,196 - INFO - Opening reviews for: Avicenna International Hospital
+2025-05-16 23:39:13,197 - INFO - Searching for reviews section
+2025-05-16 23:39:16,198 - INFO - Trying to find Reviews tab...
+2025-05-16 23:39:16,233 - INFO - Found Reviews tab
+2025-05-16 23:39:18,325 - INFO - Scrolling to find reviews...
+2025-05-16 23:39:18,326 - INFO - Review scroll 1/5
+2025-05-16 23:39:21,594 - INFO - Review scroll 2/5
+2025-05-16 23:39:24,190 - INFO - Review scroll 3/5
+2025-05-16 23:39:27,762 - INFO - Review scroll 4/5
+2025-05-16 23:39:30,857 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:39:30,858 - INFO - Review scroll 5/5
+2025-05-16 23:39:33,538 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:39:33,543 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:39:33,548 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:39:34,094 - INFO - Extracted 30 valid reviews for Avicenna International Hospital
+2025-05-16 23:39:34,106 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Avicenna_International_Hospital_reviews.csv
+2025-05-16 23:39:44,370 - INFO - Opening reviews for: Memorial Bahçelievler Hastanesi
+2025-05-16 23:39:44,371 - INFO - Searching for reviews section
+2025-05-16 23:39:47,373 - INFO - Trying to find Reviews tab...
+2025-05-16 23:39:47,410 - INFO - Found Reviews tab
+2025-05-16 23:39:49,516 - INFO - Scrolling to find reviews...
+2025-05-16 23:39:49,516 - INFO - Review scroll 1/5
+2025-05-16 23:39:52,245 - INFO - Review scroll 2/5
+2025-05-16 23:39:54,868 - INFO - Review scroll 3/5
+2025-05-16 23:39:58,217 - INFO - Review scroll 4/5
+2025-05-16 23:40:00,992 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:40:00,993 - INFO - Review scroll 5/5
+2025-05-16 23:40:03,800 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:40:03,804 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:40:03,807 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:40:04,277 - INFO - Extracted 30 valid reviews for Memorial Bahçelievler Hastanesi
+2025-05-16 23:40:04,293 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Memorial_Bah_elievler_Hastanesi_reviews.csv
+2025-05-16 23:40:14,355 - INFO - Opening reviews for: Hisar Intercontinental Hastanesi
+2025-05-16 23:40:14,357 - INFO - Searching for reviews section
+2025-05-16 23:40:17,358 - INFO - Trying to find Reviews tab...
+2025-05-16 23:40:17,388 - INFO - Found Reviews tab
+2025-05-16 23:40:19,466 - INFO - Scrolling to find reviews...
+2025-05-16 23:40:19,466 - INFO - Review scroll 1/5
+2025-05-16 23:40:22,260 - INFO - Review scroll 2/5
+2025-05-16 23:40:25,611 - INFO - Review scroll 3/5
+2025-05-16 23:40:29,013 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:40:29,013 - INFO - Review scroll 4/5
+2025-05-16 23:40:32,147 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-16 23:40:32,147 - INFO - Review scroll 5/5
+2025-05-16 23:40:35,234 - INFO - Found 100 reviews already, stopping scrolling
+2025-05-16 23:40:35,239 - INFO - Found 50 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:40:35,243 - INFO - Found 50 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:40:36,100 - INFO - Extracted 50 valid reviews for Hisar Intercontinental Hastanesi
+2025-05-16 23:40:36,103 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Hisar_Intercontinental_Hastanesi_reviews.csv
+2025-05-16 23:40:45,713 - INFO - Opening reviews for: Private Mecidiyeköy Çevre Hospital
+2025-05-16 23:40:45,713 - INFO - Searching for reviews section
+2025-05-16 23:40:48,715 - INFO - Trying to find Reviews tab...
+2025-05-16 23:40:48,732 - INFO - Found Reviews tab
+2025-05-16 23:40:50,766 - INFO - Scrolling to find reviews...
+2025-05-16 23:40:50,766 - INFO - Review scroll 1/5
+2025-05-16 23:40:53,765 - INFO - Review scroll 2/5
+2025-05-16 23:40:56,526 - INFO - Review scroll 3/5
+2025-05-16 23:40:59,473 - INFO - Review scroll 4/5
+2025-05-16 23:41:02,640 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:41:02,641 - INFO - Review scroll 5/5
+2025-05-16 23:41:05,435 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:41:05,441 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:41:05,446 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:41:05,862 - INFO - Extracted 30 valid reviews for Private Mecidiyeköy Çevre Hospital
+2025-05-16 23:41:05,865 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Private_Mecidiyek_y__evre_Hospital_reviews.csv
+2025-05-16 23:41:15,115 - INFO - Opening reviews for: Acıbadem Hospital in Taksim
+2025-05-16 23:41:15,116 - INFO - Searching for reviews section
+2025-05-16 23:41:18,116 - INFO - Trying to find Reviews tab...
+2025-05-16 23:41:18,144 - INFO - Found Reviews tab
+2025-05-16 23:41:20,221 - INFO - Scrolling to find reviews...
+2025-05-16 23:41:20,221 - INFO - Review scroll 1/5
+2025-05-16 23:41:23,705 - INFO - Review scroll 2/5
+2025-05-16 23:41:26,812 - INFO - Review scroll 3/5
+2025-05-16 23:41:30,329 - INFO - Review scroll 4/5
+2025-05-16 23:41:33,653 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:41:33,653 - INFO - Review scroll 5/5
+2025-05-16 23:41:36,452 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:41:36,459 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:41:36,464 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:41:36,907 - INFO - Extracted 30 valid reviews for Acıbadem Hospital in Taksim
+2025-05-16 23:41:36,910 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Ac_badem_Hospital_in_Taksim_reviews.csv
+2025-05-16 23:41:46,184 - INFO - Opening reviews for: Medical Park Bahçelievler Hospital
+2025-05-16 23:41:46,186 - INFO - Searching for reviews section
+2025-05-16 23:41:49,188 - INFO - Trying to find Reviews tab...
+2025-05-16 23:41:49,220 - INFO - Found Reviews tab
+2025-05-16 23:41:51,300 - INFO - Scrolling to find reviews...
+2025-05-16 23:41:51,300 - INFO - Review scroll 1/5
+2025-05-16 23:41:54,739 - INFO - Review scroll 2/5
+2025-05-16 23:41:57,957 - INFO - Review scroll 3/5
+2025-05-16 23:42:00,534 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:42:00,534 - INFO - Review scroll 4/5
+2025-05-16 23:42:03,118 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:42:03,118 - INFO - Review scroll 5/5
+2025-05-16 23:42:05,976 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-16 23:42:05,978 - INFO - Found 40 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:42:05,980 - INFO - Found 40 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:42:06,505 - INFO - Extracted 40 valid reviews for Medical Park Bahçelievler Hospital
+2025-05-16 23:42:06,507 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Medical_Park_Bah_elievler_Hospital_reviews.csv
+2025-05-16 23:42:13,488 - INFO - Opening reviews for: Acıbadem International Hospital
+2025-05-16 23:42:13,489 - INFO - Searching for reviews section
+2025-05-16 23:42:16,490 - INFO - Trying to find Reviews tab...
+2025-05-16 23:42:16,520 - INFO - Found Reviews tab
+2025-05-16 23:42:18,598 - INFO - Scrolling to find reviews...
+2025-05-16 23:42:18,599 - INFO - Review scroll 1/5
+2025-05-16 23:42:21,249 - INFO - Review scroll 2/5
+2025-05-16 23:42:24,528 - INFO - Review scroll 3/5
+2025-05-16 23:42:27,619 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:42:27,620 - INFO - Review scroll 4/5
+2025-05-16 23:42:31,030 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:42:31,030 - INFO - Review scroll 5/5
+2025-05-16 23:42:33,610 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-16 23:42:33,616 - INFO - Found 40 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:42:33,621 - INFO - Found 40 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:42:34,297 - INFO - Extracted 40 valid reviews for Acıbadem International Hospital
+2025-05-16 23:42:34,301 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Ac_badem_International_Hospital_reviews.csv
+2025-05-16 23:42:42,040 - INFO - Opening reviews for: İ.A.Ü. VM Medical Park Florya Hastanesi
+2025-05-16 23:42:42,041 - INFO - Searching for reviews section
+2025-05-16 23:42:45,042 - INFO - Trying to find Reviews tab...
+2025-05-16 23:42:45,072 - INFO - Found Reviews tab
+2025-05-16 23:42:47,156 - INFO - Scrolling to find reviews...
+2025-05-16 23:42:47,157 - INFO - Review scroll 1/5
+2025-05-16 23:42:50,557 - INFO - Review scroll 2/5
+2025-05-16 23:42:53,877 - INFO - Review scroll 3/5
+2025-05-16 23:42:56,610 - INFO - Review scroll 4/5
+2025-05-16 23:42:59,332 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:42:59,333 - INFO - Review scroll 5/5
+2025-05-16 23:43:02,551 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-16 23:43:02,558 - INFO - Found 40 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:43:02,564 - INFO - Found 40 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:43:03,124 - INFO - Extracted 40 valid reviews for İ.A.Ü. VM Medical Park Florya Hastanesi
+2025-05-16 23:43:03,126 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/__A____VM_Medical_Park_Florya_Hastanesi_reviews.csv
+2025-05-16 23:43:09,896 - INFO - Opening reviews for: Medivita İncirli Hastanesi
+2025-05-16 23:43:09,897 - INFO - Searching for reviews section
+2025-05-16 23:43:12,898 - INFO - Trying to find Reviews tab...
+2025-05-16 23:43:12,911 - INFO - Found Reviews tab
+2025-05-16 23:43:14,948 - INFO - Scrolling to find reviews...
+2025-05-16 23:43:14,948 - INFO - Review scroll 1/5
+2025-05-16 23:43:17,909 - INFO - Review scroll 2/5
+2025-05-16 23:43:21,341 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-16 23:43:21,341 - INFO - Review scroll 3/5
+2025-05-16 23:43:24,662 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-16 23:43:24,662 - INFO - Review scroll 4/5
+2025-05-16 23:43:27,711 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-16 23:43:27,712 - INFO - Review scroll 5/5
+2025-05-16 23:43:30,372 - INFO - Found 100 reviews already, stopping scrolling
+2025-05-16 23:43:30,380 - INFO - Found 50 review elements with selector: div[class*='jJc9Ad']
+2025-05-16 23:43:30,386 - INFO - Found 50 reviews with selector: div[class*='jJc9Ad']
+2025-05-16 23:43:31,105 - INFO - Extracted 50 valid reviews for Medivita İncirli Hastanesi
+2025-05-16 23:43:31,108 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Medivita__ncirli_Hastanesi_reviews.csv
