@@ -110,7 +110,7 @@ async def search_google_maps(page, location, rate_limiter):
         await page.wait_for_selector("input[id='searchboxinput']", timeout=3000)
         
         search_box = page.locator("input[id='searchboxinput']")
-        search_query = f"hospitals in {location}"
+        search_query = f"top hospitals in {location}"
         logger.info(f"Searching for: {search_query}")
         
         await search_box.fill(search_query)
@@ -490,6 +490,37 @@ def save_reviews_to_csv(reviews, hospital_name, location):
     except Exception as e:
         logger.error(f"Unexpected error saving CSV: {str(e)}")
 
+def save_hospital_list_to_csv(hospitals, location):
+    """Save the list of hospitals to a CSV file"""
+    if not hospitals:
+        logger.warning(f"No hospitals to save for {location}")
+        return
+        
+    try:
+        # Create a directory for the location if it doesn't exist
+        location_dir = f"hospital_reviews_{location.replace(' ', '_')}"
+        os.makedirs(location_dir, exist_ok=True)
+        
+        # Create a filename for the hospital list
+        filename = os.path.join(location_dir, f"hospital_list_{location.replace(' ', '_')}.csv")
+        
+        # Add an index column to the data
+        hospital_data = []
+        for i, hospital in enumerate(hospitals, 1):
+            hospital_data.append({
+                'Index': i,
+                'Hospital Name': hospital['name'],
+                'Google Maps URL': hospital['href']
+            })
+        
+        df = pd.DataFrame(hospital_data)
+        df.to_csv(filename, index=False, encoding='utf-8')
+        logger.info(f"Hospital list saved to {filename}")
+    except IOError as e:
+        logger.error(f"Error saving hospital list to CSV: {str(e)}")
+    except Exception as e:
+        logger.error(f"Unexpected error saving hospital list CSV: {str(e)}")
+
 async def main():
     location = "Istanbul, Turkey"  # You can change this to any location
     rate_limiter = RateLimiter(min_delay=2.0, max_delay=5.0)
@@ -510,6 +541,9 @@ async def main():
         if not hospitals:
             logger.warning(f"No hospitals found in {location}")
             return
+            
+        # Save the hospital list to CSV
+        save_hospital_list_to_csv(hospitals, location)
 
         # Scrape reviews for each hospital
         for hospital in hospitals:
