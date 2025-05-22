@@ -184,3 +184,459 @@
 2025-05-16 23:43:30,386 - INFO - Found 50 reviews with selector: div[class*='jJc9Ad']
 2025-05-16 23:43:31,105 - INFO - Extracted 50 valid reviews for Medivita İncirli Hastanesi
 2025-05-16 23:43:31,108 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Medivita__ncirli_Hastanesi_reviews.csv
+2025-05-22 17:23:50,365 - ERROR - Failed to initialize browser: BrowserType.launch: Executable doesn't exist at /Users/nadeemahmad/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2025-05-22 17:23:50,365 - ERROR - Unhandled exception in main: BrowserType.launch: Executable doesn't exist at /Users/nadeemahmad/Library/Caches/ms-playwright/chromium-1169/chrome-mac/Chromium.app/Contents/MacOS/Chromium
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2025-05-22 17:24:18,752 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:24:18,801 - INFO - Waiting for search results...
+2025-05-22 17:24:21,545 - INFO - Search results loaded
+2025-05-22 17:24:21,549 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:24:21,549 - INFO - Scroll 1/5
+2025-05-22 17:24:24,210 - INFO - Scroll 2/5
+2025-05-22 17:24:27,073 - INFO - Scroll 3/5
+2025-05-22 17:24:29,333 - INFO - Scroll 4/5
+2025-05-22 17:24:31,696 - INFO - Scroll 5/5
+2025-05-22 17:24:34,660 - INFO - Found 34 hospital listings
+2025-05-22 17:24:34,687 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:24:34,704 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:24:34,719 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:24:34,731 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:24:34,742 - INFO - Added hospital: American Hospital
+2025-05-22 17:24:34,751 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:24:34,761 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:24:34,770 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:24:34,779 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:24:34,788 - INFO - Added hospital: Acıbadem Hospital in Taksim
+2025-05-22 17:24:34,807 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:24:38,689 - INFO - Opening reviews for: Memorial Şişli Hastanesi
+2025-05-22 17:24:38,690 - INFO - Searching for reviews section
+2025-05-22 17:24:41,691 - INFO - Trying to find Reviews tab...
+2025-05-22 17:24:41,697 - WARNING - Could not find Reviews tab: Locator.count: Target page, context or browser has been closed
+2025-05-22 17:24:41,697 - INFO - Looking for review elements directly...
+2025-05-22 17:24:41,704 - INFO - Trying to click on elements that might reveal reviews...
+2025-05-22 17:24:41,710 - WARNING - Could not find the reviews section, trying to continue anyway
+2025-05-22 17:24:41,712 - ERROR - Error during review scraping: Page.screenshot: Target page, context or browser has been closed
+2025-05-22 17:24:41,713 - INFO - Extracted 0 valid reviews for Memorial Şişli Hastanesi
+2025-05-22 17:24:41,713 - WARNING - No valid reviews to save for Memorial Şişli Hastanesi
+2025-05-22 17:24:44,772 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:44,772 - ERROR - Failed to process hospital Liv Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:48,124 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:48,124 - ERROR - Failed to process hospital Avicenna International Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:50,171 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:50,171 - ERROR - Failed to process hospital Hisar Intercontinental Hastanesi: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:53,257 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:53,258 - ERROR - Failed to process hospital American Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:55,609 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:24:55,610 - ERROR - Failed to process hospital Turkey Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:00,415 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:00,415 - ERROR - Failed to process hospital Private Istanbul Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:02,587 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:02,587 - ERROR - Failed to process hospital Medicana International Istanbul: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:07,622 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:07,624 - ERROR - Failed to process hospital Private Mecidiyeköy Çevre Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:10,252 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:25:10,252 - ERROR - Failed to process hospital Acıbadem Hospital in Taksim: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:31:17,789 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:31:17,854 - INFO - Waiting for search results...
+2025-05-22 17:31:20,679 - INFO - Search results loaded
+2025-05-22 17:31:20,708 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:31:20,708 - INFO - Scroll 1/5
+2025-05-22 17:31:22,993 - INFO - Scroll 2/5
+2025-05-22 17:31:25,988 - INFO - Scroll 3/5
+2025-05-22 17:31:28,856 - INFO - Scroll 4/5
+2025-05-22 17:31:31,080 - INFO - Scroll 5/5
+2025-05-22 17:31:34,116 - INFO - Found 36 hospital listings
+2025-05-22 17:31:34,151 - ERROR - Unhandled exception in main: 'ElementHandle' object has no attribute 'query_selecotr'
+2025-05-22 17:31:53,592 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:31:53,626 - INFO - Waiting for search results...
+2025-05-22 17:31:55,549 - INFO - Search results loaded
+2025-05-22 17:31:55,555 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:31:55,555 - INFO - Scroll 1/5
+2025-05-22 17:31:57,631 - INFO - Scroll 2/5
+2025-05-22 17:32:00,163 - INFO - Scroll 3/5
+2025-05-22 17:32:02,827 - INFO - Scroll 4/5
+2025-05-22 17:32:05,458 - INFO - Scroll 5/5
+2025-05-22 17:32:08,001 - INFO - Found 35 hospital listings
+2025-05-22 17:32:08,026 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:32:08,043 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:32:08,057 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:32:08,069 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:32:08,080 - INFO - Added hospital: American Hospital
+2025-05-22 17:32:08,091 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:32:08,102 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:32:08,113 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:32:08,125 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:32:08,136 - INFO - Added hospital: Acıbadem Hospital in Taksim
+2025-05-22 17:32:08,148 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:32:11,922 - INFO - Opening reviews for: Memorial Şişli Hastanesi
+2025-05-22 17:32:11,923 - INFO - Searching for reviews section
+2025-05-22 17:32:14,924 - INFO - Trying to find Reviews tab...
+2025-05-22 17:32:14,949 - INFO - Found Reviews tab
+2025-05-22 17:32:17,052 - INFO - Scrolling to find reviews...
+2025-05-22 17:32:17,052 - INFO - Review scroll 1/5
+2025-05-22 17:32:20,398 - INFO - Review scroll 2/5
+2025-05-22 17:32:20,401 - ERROR - Error during review scraping: Mouse.wheel: Target page, context or browser has been closed
+2025-05-22 17:32:20,402 - INFO - Extracted 0 valid reviews for Memorial Şişli Hastanesi
+2025-05-22 17:32:20,402 - WARNING - No valid reviews to save for Memorial Şişli Hastanesi
+2025-05-22 17:34:57,802 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:34:57,845 - INFO - Waiting for search results...
+2025-05-22 17:34:59,189 - INFO - Search results loaded
+2025-05-22 17:34:59,194 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:34:59,194 - INFO - Scroll 1/5
+2025-05-22 17:35:01,791 - INFO - Scroll 2/5
+2025-05-22 17:35:04,139 - INFO - Scroll 3/5
+2025-05-22 17:35:06,233 - INFO - Scroll 4/5
+2025-05-22 17:35:08,904 - INFO - Scroll 5/5
+2025-05-22 17:35:11,177 - INFO - Found 34 hospital listings
+2025-05-22 17:35:11,206 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:35:11,223 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:35:11,237 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:35:11,250 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:35:11,260 - INFO - Added hospital: American Hospital
+2025-05-22 17:35:11,272 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:35:11,283 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:35:11,294 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:35:11,324 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:35:11,336 - INFO - Added hospital: Acıbadem Hospital in Taksim
+2025-05-22 17:35:11,344 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:35:15,078 - INFO - Opening reviews for: Memorial Şişli Hastanesi
+2025-05-22 17:35:15,078 - INFO - Searching for reviews section
+2025-05-22 17:35:18,080 - INFO - Trying to find Reviews tab...
+2025-05-22 17:35:18,106 - INFO - Found Reviews tab
+2025-05-22 17:35:20,207 - INFO - Scrolling to find reviews...
+2025-05-22 17:35:20,208 - INFO - Review scroll 1/5
+2025-05-22 17:35:23,267 - INFO - Review scroll 2/5
+2025-05-22 17:35:25,869 - INFO - Review scroll 3/5
+2025-05-22 17:39:19,096 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:39:19,131 - INFO - Waiting for search results...
+2025-05-22 17:39:23,012 - INFO - Search results loaded
+2025-05-22 17:39:23,017 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:39:23,018 - INFO - Scroll 1/5
+2025-05-22 17:39:25,500 - INFO - Scroll 2/5
+2025-05-22 17:39:27,970 - INFO - Scroll 3/5
+2025-05-22 17:39:30,826 - INFO - Scroll 4/5
+2025-05-22 17:39:33,404 - INFO - Scroll 5/5
+2025-05-22 17:39:36,276 - INFO - Found 34 hospital listings
+2025-05-22 17:39:36,312 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:39:36,334 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:39:36,350 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:39:36,369 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:39:36,388 - INFO - Added hospital: American Hospital
+2025-05-22 17:39:36,422 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:39:36,443 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:39:36,462 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:39:36,484 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:39:36,509 - INFO - Added hospital: Acıbadem Hospital in Taksim
+2025-05-22 17:39:36,530 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:39:43,112 - INFO - Opening reviews for: Memorial Şişli Hastanesi
+2025-05-22 17:39:43,114 - INFO - Searching for reviews section
+2025-05-22 17:39:46,115 - INFO - Trying to find Reviews tab...
+2025-05-22 17:39:46,145 - INFO - Found Reviews tab
+2025-05-22 17:39:48,269 - INFO - Scrolling to find reviews...
+2025-05-22 17:39:48,269 - INFO - Review scroll 1/5
+2025-05-22 17:41:23,721 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:41:23,762 - INFO - Waiting for search results...
+2025-05-22 17:41:25,615 - INFO - Search results loaded
+2025-05-22 17:41:25,634 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:41:25,634 - INFO - Scroll 1/5
+2025-05-22 17:41:28,299 - INFO - Scroll 2/5
+2025-05-22 17:41:30,649 - INFO - Scroll 3/5
+2025-05-22 17:41:33,558 - INFO - Scroll 4/5
+2025-05-22 17:41:36,038 - INFO - Scroll 5/5
+2025-05-22 17:41:38,253 - INFO - Found 34 hospital listings
+2025-05-22 17:41:38,288 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:41:38,308 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:41:38,325 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:41:38,338 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:41:38,354 - INFO - Added hospital: American Hospital
+2025-05-22 17:41:38,367 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:41:38,381 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:41:38,395 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:41:38,409 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:41:38,423 - INFO - Added hospital: Acıbadem Hospital in Taksim
+2025-05-22 17:41:38,440 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:43:44,242 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:43:44,278 - INFO - Waiting for search results...
+2025-05-22 17:43:48,234 - INFO - Search results loaded
+2025-05-22 17:43:48,236 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:43:48,236 - INFO - Scroll 1/5
+2025-05-22 17:43:50,295 - INFO - Scroll 2/5
+2025-05-22 17:43:52,461 - INFO - Scroll 3/5
+2025-05-22 17:43:54,969 - INFO - Scroll 4/5
+2025-05-22 17:43:57,627 - INFO - Scroll 5/5
+2025-05-22 17:44:00,522 - INFO - Found 35 hospital listings
+2025-05-22 17:44:00,549 - ERROR - Unhandled exception in main: 'ElementHandle' object is not subscriptable
+2025-05-22 17:44:31,805 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:44:31,836 - INFO - Waiting for search results...
+2025-05-22 17:44:35,666 - INFO - Search results loaded
+2025-05-22 17:44:35,683 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:44:35,684 - INFO - Scroll 1/5
+2025-05-22 17:44:38,692 - INFO - Scroll 2/5
+2025-05-22 17:44:41,050 - INFO - Scroll 3/5
+2025-05-22 17:44:43,341 - INFO - Scroll 4/5
+2025-05-22 17:44:45,555 - INFO - Scroll 5/5
+2025-05-22 17:44:48,198 - INFO - Found 36 hospital listings
+2025-05-22 17:44:48,239 - INFO - Added hospital: İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:44:48,257 - INFO - Added hospital: İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:44:48,278 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:44:48,294 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:44:48,309 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:44:48,324 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:44:48,338 - INFO - Added hospital: American Hospital
+2025-05-22 17:44:48,352 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:44:48,366 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:44:48,382 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:44:48,403 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:44:52,933 - INFO - Opening reviews for: İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:44:52,934 - INFO - Searching for reviews section
+2025-05-22 17:44:55,934 - INFO - Trying to find Reviews tab...
+2025-05-22 17:44:55,940 - WARNING - Could not find Reviews tab: Locator.count: Target page, context or browser has been closed
+2025-05-22 17:44:55,940 - INFO - Looking for review elements directly...
+2025-05-22 17:44:55,946 - INFO - Trying to click on elements that might reveal reviews...
+2025-05-22 17:44:55,952 - WARNING - Could not find the reviews section, trying to continue anyway
+2025-05-22 17:44:55,953 - ERROR - Error during review scraping: Page.screenshot: Target page, context or browser has been closed
+2025-05-22 17:44:55,955 - INFO - Extracted 0 valid reviews for İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:44:55,955 - WARNING - No valid reviews to save for İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:45:02,236 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:45:02,238 - ERROR - Failed to process hospital İstinye Üniversite Hastanesi Liv Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:45:06,839 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:45:06,839 - ERROR - Failed to process hospital Memorial Şişli Hastanesi: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:45:09,073 - ERROR - Error opening hospital URL: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:45:09,074 - ERROR - Failed to process hospital Liv Hospital: Page.goto: Target page, context or browser has been closed
+2025-05-22 17:48:11,294 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:48:11,329 - INFO - Waiting for search results...
+2025-05-22 17:48:14,209 - INFO - Search results loaded
+2025-05-22 17:48:14,217 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:48:14,217 - INFO - Scroll 1/5
+2025-05-22 17:48:17,129 - INFO - Scroll 2/5
+2025-05-22 17:48:19,899 - INFO - Scroll 3/5
+2025-05-22 17:48:22,322 - INFO - Scroll 4/5
+2025-05-22 17:48:24,791 - INFO - Scroll 5/5
+2025-05-22 17:48:27,120 - INFO - Found 36 hospital listings
+2025-05-22 17:48:27,160 - ERROR - Unhandled exception in main: 'ElementHandle' object is not subscriptable
+2025-05-22 17:49:33,728 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:49:33,882 - INFO - Waiting for search results...
+2025-05-22 17:49:37,809 - INFO - Search results loaded
+2025-05-22 17:49:37,812 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:49:37,812 - INFO - Scroll 1/5
+2025-05-22 17:49:40,583 - INFO - Scroll 2/5
+2025-05-22 17:49:42,721 - INFO - Scroll 3/5
+2025-05-22 17:49:45,654 - INFO - Scroll 4/5
+2025-05-22 17:49:48,326 - INFO - Scroll 5/5
+2025-05-22 17:49:50,938 - INFO - Found 36 hospital listings
+2025-05-22 17:49:50,965 - INFO - Added hospital: İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:49:51,008 - INFO - Added hospital: İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:49:51,023 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:49:51,037 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:49:51,051 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:49:51,066 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:49:51,079 - INFO - Added hospital: American Hospital
+2025-05-22 17:49:51,093 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:49:51,106 - INFO - Added hospital: Private Istanbul Hospital
+2025-05-22 17:49:51,125 - INFO - Added hospital: Medicana International Istanbul
+2025-05-22 17:49:51,142 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:49:56,169 - INFO - Opening reviews for: İstinye Üniversite Hastanesi Liv Hospital
+2025-05-22 17:49:56,170 - INFO - Searching for reviews section
+2025-05-22 17:49:59,170 - INFO - Trying to find Reviews tab...
+2025-05-22 17:49:59,194 - INFO - Found Reviews tab
+2025-05-22 17:50:01,304 - INFO - Scrolling to find reviews...
+2025-05-22 17:50:01,304 - INFO - Review scroll 1/5
+2025-05-22 17:50:04,857 - INFO - Review scroll 2/5
+2025-05-22 17:50:52,861 - INFO - Searching for: top hospitals in Istanbul, Turkey
+2025-05-22 17:50:52,918 - INFO - Waiting for search results...
+2025-05-22 17:50:55,234 - INFO - Search results loaded
+2025-05-22 17:50:55,239 - INFO - Scrolling to load more hospital results...
+2025-05-22 17:50:55,239 - INFO - Scroll 1/5
+2025-05-22 17:50:57,669 - INFO - Scroll 2/5
+2025-05-22 17:51:00,262 - INFO - Scroll 3/5
+2025-05-22 17:51:03,120 - INFO - Scroll 4/5
+2025-05-22 17:51:05,273 - INFO - Scroll 5/5
+2025-05-22 17:51:08,005 - INFO - Found 37 hospital listings
+2025-05-22 17:51:08,042 - INFO - Added hospital: Hisar Hospital Intercontinental
+2025-05-22 17:51:08,061 - INFO - Added hospital: CNR MEDICARE
+2025-05-22 17:51:08,077 - INFO - Added hospital: Memorial Şişli Hastanesi
+2025-05-22 17:51:08,090 - INFO - Added hospital: American Hospital
+2025-05-22 17:51:08,103 - INFO - Added hospital: Turkey Hospital
+2025-05-22 17:51:08,117 - INFO - Added hospital: Liv Hospital
+2025-05-22 17:51:08,130 - INFO - Added hospital: Avicenna International Hospital
+2025-05-22 17:51:08,144 - INFO - Added hospital: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:51:08,156 - INFO - Added hospital: Hisar Intercontinental Hastanesi
+2025-05-22 17:51:08,171 - INFO - Added hospital: Medical Park Bahçelievler Hospital
+2025-05-22 17:51:08,190 - INFO - Hospital list saved to hospital_reviews_Istanbul,_Turkey/hospital_list_Istanbul,_Turkey.csv
+2025-05-22 17:51:12,919 - INFO - Opening reviews for: Hisar Hospital Intercontinental
+2025-05-22 17:51:12,920 - INFO - Searching for reviews section
+2025-05-22 17:51:15,922 - INFO - Trying to find Reviews tab...
+2025-05-22 17:51:15,958 - INFO - Found Reviews tab
+2025-05-22 17:51:18,116 - INFO - Scrolling to find reviews...
+2025-05-22 17:51:18,117 - INFO - Review scroll 1/5
+2025-05-22 17:51:21,334 - INFO - Review scroll 2/5
+2025-05-22 17:51:23,902 - INFO - Review scroll 3/5
+2025-05-22 17:51:26,763 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:51:26,763 - INFO - Review scroll 4/5
+2025-05-22 17:51:29,679 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-22 17:51:29,679 - INFO - Review scroll 5/5
+2025-05-22 17:51:32,796 - INFO - Found 100 reviews already, stopping scrolling
+2025-05-22 17:51:32,801 - INFO - Found 50 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:51:32,805 - INFO - Found 50 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:51:33,455 - INFO - Extracted 50 valid reviews for Hisar Hospital Intercontinental
+2025-05-22 17:51:33,457 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Hisar_Hospital_Intercontinental_reviews.csv
+2025-05-22 17:51:42,514 - INFO - Opening reviews for: CNR MEDICARE
+2025-05-22 17:51:42,515 - INFO - Searching for reviews section
+2025-05-22 17:51:45,516 - INFO - Trying to find Reviews tab...
+2025-05-22 17:51:45,544 - INFO - Found Reviews tab
+2025-05-22 17:51:47,614 - INFO - Scrolling to find reviews...
+2025-05-22 17:51:47,615 - INFO - Review scroll 1/5
+2025-05-22 17:51:50,467 - INFO - Review scroll 2/5
+2025-05-22 17:51:53,949 - INFO - Review scroll 3/5
+2025-05-22 17:51:57,261 - INFO - Review scroll 4/5
+2025-05-22 17:52:00,529 - INFO - Review scroll 5/5
+2025-05-22 17:52:03,562 - INFO - Found 9 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:52:03,565 - INFO - Found 9 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:52:03,692 - INFO - Extracted 9 valid reviews for CNR MEDICARE
+2025-05-22 17:52:03,699 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/CNR_MEDICARE_reviews.csv
+2025-05-22 17:52:11,668 - INFO - Opening reviews for: Memorial Şişli Hastanesi
+2025-05-22 17:52:11,668 - INFO - Searching for reviews section
+2025-05-22 17:52:14,669 - INFO - Trying to find Reviews tab...
+2025-05-22 17:52:14,696 - INFO - Found Reviews tab
+2025-05-22 17:52:16,752 - INFO - Scrolling to find reviews...
+2025-05-22 17:52:16,753 - INFO - Review scroll 1/5
+2025-05-22 17:52:20,241 - INFO - Review scroll 2/5
+2025-05-22 17:52:23,595 - INFO - Review scroll 3/5
+2025-05-22 17:52:26,383 - INFO - Review scroll 4/5
+2025-05-22 17:52:29,823 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:52:29,824 - INFO - Review scroll 5/5
+2025-05-22 17:52:33,158 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:52:33,161 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:52:33,165 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:52:33,546 - INFO - Extracted 30 valid reviews for Memorial Şişli Hastanesi
+2025-05-22 17:52:33,548 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Memorial__i_li_Hastanesi_reviews.csv
+2025-05-22 17:52:41,907 - INFO - Opening reviews for: American Hospital
+2025-05-22 17:52:41,908 - INFO - Searching for reviews section
+2025-05-22 17:52:44,908 - INFO - Trying to find Reviews tab...
+2025-05-22 17:52:44,928 - INFO - Found Reviews tab
+2025-05-22 17:52:47,000 - INFO - Scrolling to find reviews...
+2025-05-22 17:52:47,000 - INFO - Review scroll 1/5
+2025-05-22 17:52:49,978 - INFO - Review scroll 2/5
+2025-05-22 17:52:53,519 - INFO - Review scroll 3/5
+2025-05-22 17:52:56,809 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:52:56,810 - INFO - Review scroll 4/5
+2025-05-22 17:52:59,958 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-22 17:52:59,959 - INFO - Review scroll 5/5
+2025-05-22 17:53:02,720 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-22 17:53:02,724 - INFO - Found 40 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:53:02,728 - INFO - Found 40 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:53:03,272 - INFO - Extracted 40 valid reviews for American Hospital
+2025-05-22 17:53:03,273 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/American_Hospital_reviews.csv
+2025-05-22 17:53:13,323 - INFO - Opening reviews for: Turkey Hospital
+2025-05-22 17:53:13,324 - INFO - Searching for reviews section
+2025-05-22 17:53:16,325 - INFO - Trying to find Reviews tab...
+2025-05-22 17:53:16,354 - INFO - Found Reviews tab
+2025-05-22 17:53:18,433 - INFO - Scrolling to find reviews...
+2025-05-22 17:53:18,434 - INFO - Review scroll 1/5
+2025-05-22 17:53:21,172 - INFO - Review scroll 2/5
+2025-05-22 17:53:23,720 - INFO - Review scroll 3/5
+2025-05-22 17:53:27,019 - INFO - Review scroll 4/5
+2025-05-22 17:53:29,861 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:53:29,861 - INFO - Review scroll 5/5
+2025-05-22 17:53:33,244 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-22 17:53:33,248 - INFO - Found 40 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:53:33,251 - INFO - Found 40 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:53:33,757 - INFO - Extracted 37 valid reviews for Turkey Hospital
+2025-05-22 17:53:33,760 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Turkey_Hospital_reviews.csv
+2025-05-22 17:53:43,688 - INFO - Opening reviews for: Liv Hospital
+2025-05-22 17:53:43,689 - INFO - Searching for reviews section
+2025-05-22 17:53:46,691 - INFO - Trying to find Reviews tab...
+2025-05-22 17:53:46,716 - INFO - Found Reviews tab
+2025-05-22 17:53:48,788 - INFO - Scrolling to find reviews...
+2025-05-22 17:53:48,788 - INFO - Review scroll 1/5
+2025-05-22 17:53:51,891 - INFO - Review scroll 2/5
+2025-05-22 17:53:55,231 - INFO - Review scroll 3/5
+2025-05-22 17:53:58,293 - INFO - Review scroll 4/5
+2025-05-22 17:54:01,589 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:54:01,589 - INFO - Review scroll 5/5
+2025-05-22 17:54:04,838 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:54:04,840 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:54:04,842 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:54:05,207 - INFO - Extracted 30 valid reviews for Liv Hospital
+2025-05-22 17:54:05,210 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Liv_Hospital_reviews.csv
+2025-05-22 17:54:13,145 - INFO - Opening reviews for: Avicenna International Hospital
+2025-05-22 17:54:13,145 - INFO - Searching for reviews section
+2025-05-22 17:54:16,146 - INFO - Trying to find Reviews tab...
+2025-05-22 17:54:16,172 - INFO - Found Reviews tab
+2025-05-22 17:54:18,250 - INFO - Scrolling to find reviews...
+2025-05-22 17:54:18,250 - INFO - Review scroll 1/5
+2025-05-22 17:54:20,910 - INFO - Review scroll 2/5
+2025-05-22 17:54:24,139 - INFO - Review scroll 3/5
+2025-05-22 17:54:27,254 - INFO - Review scroll 4/5
+2025-05-22 17:54:29,949 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:54:29,949 - INFO - Review scroll 5/5
+2025-05-22 17:54:32,548 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:54:32,551 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:54:32,553 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:54:32,908 - INFO - Extracted 30 valid reviews for Avicenna International Hospital
+2025-05-22 17:54:32,910 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Avicenna_International_Hospital_reviews.csv
+2025-05-22 17:54:40,380 - INFO - Opening reviews for: Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:54:40,381 - INFO - Searching for reviews section
+2025-05-22 17:54:43,382 - INFO - Trying to find Reviews tab...
+2025-05-22 17:54:43,408 - INFO - Found Reviews tab
+2025-05-22 17:54:45,484 - INFO - Scrolling to find reviews...
+2025-05-22 17:54:45,484 - INFO - Review scroll 1/5
+2025-05-22 17:54:48,108 - INFO - Review scroll 2/5
+2025-05-22 17:54:51,034 - INFO - Review scroll 3/5
+2025-05-22 17:54:54,360 - INFO - Review scroll 4/5
+2025-05-22 17:54:56,994 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:54:56,994 - INFO - Review scroll 5/5
+2025-05-22 17:54:59,657 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:54:59,661 - INFO - Found 30 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:54:59,665 - INFO - Found 30 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:55:00,043 - INFO - Extracted 30 valid reviews for Private Mecidiyeköy Çevre Hospital
+2025-05-22 17:55:00,044 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Private_Mecidiyek_y__evre_Hospital_reviews.csv
+2025-05-22 17:55:08,199 - INFO - Opening reviews for: Hisar Intercontinental Hastanesi
+2025-05-22 17:55:08,200 - INFO - Searching for reviews section
+2025-05-22 17:55:11,202 - INFO - Trying to find Reviews tab...
+2025-05-22 17:55:11,228 - INFO - Found Reviews tab
+2025-05-22 17:55:13,298 - INFO - Scrolling to find reviews...
+2025-05-22 17:55:13,298 - INFO - Review scroll 1/5
+2025-05-22 17:55:16,119 - INFO - Review scroll 2/5
+2025-05-22 17:55:18,813 - INFO - Review scroll 3/5
+2025-05-22 17:55:21,450 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:55:21,451 - INFO - Review scroll 4/5
+2025-05-22 17:55:24,143 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-22 17:55:24,144 - INFO - Review scroll 5/5
+2025-05-22 17:55:27,444 - INFO - Found 100 reviews already, stopping scrolling
+2025-05-22 17:55:27,448 - INFO - Found 50 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:55:27,452 - INFO - Found 50 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:55:28,091 - INFO - Extracted 50 valid reviews for Hisar Intercontinental Hastanesi
+2025-05-22 17:55:28,092 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Hisar_Intercontinental_Hastanesi_reviews.csv
+2025-05-22 17:55:37,394 - INFO - Opening reviews for: Medical Park Bahçelievler Hospital
+2025-05-22 17:55:37,394 - INFO - Searching for reviews section
+2025-05-22 17:55:40,395 - INFO - Trying to find Reviews tab...
+2025-05-22 17:55:40,422 - INFO - Found Reviews tab
+2025-05-22 17:55:42,503 - INFO - Scrolling to find reviews...
+2025-05-22 17:55:42,504 - INFO - Review scroll 1/5
+2025-05-22 17:55:45,276 - INFO - Review scroll 2/5
+2025-05-22 17:55:48,085 - INFO - Review scroll 3/5
+2025-05-22 17:55:50,921 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:55:50,921 - INFO - Review scroll 4/5
+2025-05-22 17:55:54,243 - INFO - Found 60 reviews already, stopping scrolling
+2025-05-22 17:55:54,243 - INFO - Review scroll 5/5
+2025-05-22 17:55:57,020 - INFO - Found 80 reviews already, stopping scrolling
+2025-05-22 17:55:57,023 - INFO - Found 40 review elements with selector: div[class*='jJc9Ad']
+2025-05-22 17:55:57,028 - INFO - Found 40 reviews with selector: div[class*='jJc9Ad']
+2025-05-22 17:55:57,518 - INFO - Extracted 40 valid reviews for Medical Park Bahçelievler Hospital
+2025-05-22 17:55:57,519 - INFO - Reviews saved to hospital_reviews_Istanbul,_Turkey/Medical_Park_Bah_elievler_Hospital_reviews.csv

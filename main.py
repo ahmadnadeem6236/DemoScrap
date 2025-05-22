@@ -29,25 +29,25 @@ class RateLimiter:
         self.min_delay = min_delay
         self.max_delay = max_delay
         self.last_request_time = 0
-    
+
     async def wait(self):
         """Wait a random amount of time between requests"""
         now = time.time()
         elapsed = now - self.last_request_time
         delay = random.uniform(self.min_delay, self.max_delay)
-        
+
         if elapsed < delay:
             wait_time = delay - elapsed
             logger.debug(f"Rate limiting: waiting {wait_time:.2f} seconds")
             await asyncio.sleep(wait_time)
-        
+
         self.last_request_time = time.time()
 
 class ReviewValidator:
     """Validates and deduplicates review data"""
     def __init__(self):
         self.seen_reviews = set()
-    
+
     def validate_review(self, review: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         """Validate review data and return None if invalid"""
         # Check for required fields
@@ -56,18 +56,18 @@ class ReviewValidator:
             if field not in review or not review[field]:
                 logger.warning(f"Missing required field: {field}")
                 return None
-        
+
         # Check review text length
         if len(review["Review"]) < 5:
             logger.debug(f"Review too short: {review['Review']}")
             return None
-            
+
         # Deduplicate using a hash of content
         review_hash = hash(f"{review['Hospital']}:{review['Reviewer']}:{review['Review']}")
         if review_hash in self.seen_reviews:
             logger.debug(f"Duplicate review: {review['Review'][:30]}...")
             return None
-            
+
         self.seen_reviews.add(review_hash)
         return review
 
@@ -99,27 +99,27 @@ async def search_google_maps(page, location, rate_limiter):
     """Search for hospitals in the specified location"""
     try:
         await rate_limiter.wait()
-        
+
         # Set a longer navigation timeout
         page.set_default_navigation_timeout(6000)  # 60 seconds
-        
+
         await page.goto("https://www.google.com/maps")
-        
+
         # Wait for the search box to be available
         await page.wait_for_selector("input[id='searchboxinput']", timeout=3000)
-        
+
         search_box = page.locator("input[id='searchboxinput']")
         search_query = f"top hospitals in {location}"
         logger.info(f"Searching for: {search_query}")
-        
+
         await search_box.fill(search_query)
         await search_box.press("Enter")
-        
+
         # Wait for results to appear instead of networkidle
         logger.info("Waiting for search results...")
         await page.wait_for_selector("div[class*='Nv2PK']", timeout=45000)
         logger.info("Search results loaded")
-        
+
     except PlaywrightTimeoutError as e:
         logger.error(f"Timeout when searching Google Maps: {str(e)}")
         raise
@@ -130,16 +130,16 @@ async def search_google_maps(page, location, rate_limiter):
 async def search_google_location(page, location, rate_limiter):
     try:
         await rate_limiter.wait()
-        
+
         # Set a longer navigation timeout
         page.set_default_navigation_timeout(60000)  # 60 seconds
-        
+
         # Use domcontentloaded instead of networkidle
         await page.goto(location, wait_until="domcontentloaded")
-        
+
         # Wait for a reasonable amount of time for content to load
         await asyncio.sleep(3)
-        
+
     except PlaywrightTimeoutError as e:
         logger.error(f"Timeout when opening hospital URL: {str(e)}")
         raise
@@ -161,7 +161,7 @@ async def get_hospital_list(page, rate_limiter, max_hospitals=10):
             # More dramatic scrolling
             await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
             await asyncio.sleep(random.uniform(2.0, 3.0))  # Longer wait between scrolls
-            
+
             # Try to find scrollable container and scroll it too
             try:
                 await page.evaluate("""
@@ -183,22 +183,42 @@ async def get_hospital_list(page, rate_limiter, max_hospitals=10):
         for i in range(min(count, max_hospitals)):
             try:
                 element = await hospital_elements.nth(i).element_handle()
-                
+
                 name_element = await element.query_selector("div.qBF1Pd")
                 if not name_element:
                     continue
-                    
+
                 hospital_name = await name_element.inner_text()
-                
+
                 href_element = await element.query_selector("a.hfpxzc")
                 if not href_element:
                     continue
-                    
+
                 hospital_href = await href_element.get_attribute("href")
-                
+
+                address_element = await element.query_selector("div.W4Efsd:nth-child(1)")  # More specific selector for address
+                hospital_address = ""
+                if address_element:
+                    address_text = await address_element.inner_text()
+                    # Split by newlines and get the second line which contains the actual address
+                    address_lines = address_text.split('\n')
+                    if len(address_lines) >= 2:
+                        # Take the second line which contains the actual address
+                        hospital_address = address_lines[1].strip()
+                    elif address_lines:
+                        # If there's only one line, try to remove common hospital type prefixes
+                        address = address_lines[0].strip()
+                        # Remove common hospital type prefixes
+                        prefixes_to_remove = ["General hospital", "Private hospital", "University hospital", "State hospital"]
+                        for prefix in prefixes_to_remove:
+                            if address.lower().startswith(prefix.lower()):
+                                address = address[len(prefix):].strip()
+                        hospital_address = address
+
                 if hospital_name and hospital_href:
                     hospital_info = {
                         'name': hospital_name,
+                        'address': hospital_address,
                         'href': hospital_href
                     }
                     hospitals.append(hospital_info)
@@ -227,16 +247,16 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
         # Locate and click the reviews section
         logger.info(f"Opening reviews for: {hospital_name}")
         logger.info("Searching for reviews section")
-        
+
         # Take a screenshot to see the current state
         # await page.screenshot(path=f"hospital_page_{hospital_name.replace(' ', '_')}.png")
-        
+
         # First wait for the page to stabilize
         await asyncio.sleep(3)
-        
+
         # Try multiple approaches to find the reviews section
         found_reviews = False
-        
+
         # Approach 1: Look for tab with "Reviews" text
         try:
             logger.info("Trying to find Reviews tab...")
@@ -249,7 +269,7 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                 found_reviews = True
         except PlaywrightError as e:
             logger.warning(f"Could not find Reviews tab: {str(e)}")
-        
+
         # Approach 2: Look for elements containing review text
         if not found_reviews:
             logger.info("Looking for review elements directly...")
@@ -260,7 +280,7 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                 "div[class*='rating']",   # Classes containing 'rating'
                 "div[class*='star']"      # Classes containing 'star'
             ]
-            
+
             for selector in review_selectors:
                 try:
                     elements = page.locator(selector)
@@ -271,7 +291,7 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                         break
                 except PlaywrightError:
                     continue
-        
+
         # Approach 3: Try to click on any element that might reveal reviews
         if not found_reviews:
             logger.info("Trying to click on elements that might reveal reviews...")
@@ -282,7 +302,7 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                 "div:has-text('Reviews')",
                 "span:has-text('Reviews')"
             ]
-            
+
             for selector in potential_review_triggers:
                 try:
                     elements = page.locator(selector)
@@ -295,22 +315,22 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                         break
                 except PlaywrightError:
                     continue
-        
+
         if not found_reviews:
             logger.warning("Could not find the reviews section, trying to continue anyway")
             # Take another screenshot to see current state
             await page.screenshot(path=f"no_reviews_found_{hospital_name.replace(' ', '_')}.png")
-        
+
         # Scroll to load potential reviews, even if we couldn't find a specific tab
         logger.info("Scrolling to find reviews...")
         for i in range(5):  # Increased from 3 to 5 scrolls
             logger.info(f"Review scroll {i+1}/5")
-            
+
             # Try multiple scrolling techniques
             # 1. Standard mouse wheel
             await page.mouse.wheel(0, 3000)
             await asyncio.sleep(1.0)
-            
+
             # 2. JavaScript scrolling
             try:
                 # Try to find and scroll the reviews container
@@ -319,7 +339,7 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                     const reviewContainers = Array.from(document.querySelectorAll(
                         'div[role="feed"], div[jsaction*="scroll"], div[data-review-id], div[class*="review"], div[class*="scroll"]'
                     ));
-                    
+
                     if (reviewContainers.length > 0) {
                         reviewContainers.forEach(container => {
                             container.scrollTop = container.scrollHeight;
@@ -331,10 +351,10 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                 """)
             except:
                 pass
-            
+
             # Wait after scrolling
             await asyncio.sleep(random.uniform(1.5, 2.5))
-            
+
             # 3. Check if we have enough reviews already, if so we can stop scrolling
             try:
                 for selector in ["div[class*='jJc9Ad']", "div[class*='review']", "div[data-review-id]"]:
@@ -344,7 +364,7 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                         break
             except:
                 pass
-        
+
         # Try multiple selectors for finding review elements
         review_element_selectors = [
             "div[class*='jJc9Ad']",        # Original selector
@@ -354,10 +374,10 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
             "div[class*='comment']",       # Comment sections
             "div:has(span[aria-label*='stars'])" # Elements containing star ratings
         ]
-        
+
         review_elements = None
         used_selector = None
-        
+
         for selector in review_element_selectors:
             try:
                 elements = page.locator(selector)
@@ -369,19 +389,19 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                     break
             except PlaywrightError:
                 continue
-        
+
         if not review_elements:
             logger.warning("Could not find any review elements")
             return reviews
-        
+
         count = await review_elements.count()
         logger.info(f"Found {count} reviews with selector: {used_selector}")
-        
+
         # Extract reviews using the found selector
         for i in range(min(count, max_reviews)):
             try:
                 element = await review_elements.nth(i).element_handle()
-                
+
                 # Try multiple selectors for reviewer name
                 reviewer = None
                 for name_selector in ["div[class*='d4r55']", "div[class*='author']", "span[class*='name']", "div[class*='profile']"]:
@@ -393,10 +413,10 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                                 break
                     except:
                         pass
-                
+
                 if not reviewer:
                     reviewer = f"Anonymous Reviewer {i+1}"
-                
+
                 # Try multiple selectors for rating
                 rating = None
                 for rating_selector in ["span[aria-label*='star']", "span[class*='rating']", "div[class*='star']", "span[aria-label]"]:
@@ -410,10 +430,10 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                                 break
                     except:
                         pass
-                
+
                 if not rating:
                     rating = "No rating"
-                
+
                 # Try multiple selectors for review text
                 review_text = None
                 for text_selector in ["span[class*='wiI7pd']", "div[class*='review-text']", "div[class*='content']", "span[class*='review']"]:
@@ -425,26 +445,26 @@ async def scrape_reviews(page, hospital_name, rate_limiter, validator, max_revie
                                 break
                     except:
                         pass
-                
+
                 if not review_text:
                     try:
                         # Try to get any text content as a last resort
                         review_text = await element.inner_text()
                     except:
                         review_text = "No review text available"
-                
+
                 review_data = {
                     "Hospital": hospital_name,
                     "Reviewer": clean_text(reviewer),
                     "Rating": rating,
                     "Review": clean_text(review_text)
                 }
-                
+
                 # Validate the review
                 validated_review = validator.validate_review(review_data)
                 if validated_review:
                     reviews.append(validated_review)
-                
+
             except PlaywrightError as e:
                 logger.warning(f"Error extracting review: {str(e)}")
                 continue
@@ -471,7 +491,7 @@ def save_reviews_to_csv(reviews, hospital_name, location):
     if not reviews:
         logger.warning(f"No valid reviews to save for {hospital_name}")
         return
-        
+
     try:
         # Create a directory for the location if it doesn't exist
         location_dir = f"hospital_reviews_{location.replace(' ', '_')}"
@@ -494,24 +514,25 @@ def save_hospital_list_to_csv(hospitals, location):
     if not hospitals:
         logger.warning(f"No hospitals to save for {location}")
         return
-        
+
     try:
         # Create a directory for the location if it doesn't exist
         location_dir = f"hospital_reviews_{location.replace(' ', '_')}"
         os.makedirs(location_dir, exist_ok=True)
-        
+
         # Create a filename for the hospital list
         filename = os.path.join(location_dir, f"hospital_list_{location.replace(' ', '_')}.csv")
-        
+
         # Add an index column to the data
         hospital_data = []
         for i, hospital in enumerate(hospitals, 1):
             hospital_data.append({
                 'Index': i,
                 'Hospital Name': hospital['name'],
+                'Hospital Address': hospital['address'],
                 'Google Maps URL': hospital['href']
             })
-        
+
         df = pd.DataFrame(hospital_data)
         df.to_csv(filename, index=False, encoding='utf-8')
         logger.info(f"Hospital list saved to {filename}")
@@ -529,7 +550,7 @@ async def main():
     playwright = browser = page = None
     try:
         playwright, browser, page = await initialize_browser()
-        
+
         # Search for hospitals
         await search_google_maps(page, location, rate_limiter)
 
@@ -540,7 +561,7 @@ async def main():
         if not hospitals:
             logger.warning(f"No hospitals found in {location}")
             return
-            
+
         # Save the hospital list to CSV
         save_hospital_list_to_csv(hospitals, location)
 
@@ -553,10 +574,10 @@ async def main():
 
                 # Save reviews for this hospital
                 save_reviews_to_csv(hospital_reviews, hospital['name'], location)
-                
+
                 # Add a random delay between hospitals
                 await asyncio.sleep(random.uniform(3.0, 7.0))
-                
+
             except Exception as e:
                 logger.error(f"Failed to process hospital {hospital['name']}: {str(e)}")
                 continue
