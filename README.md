@@ -22,7 +22,7 @@ This project is a Python-based web scraper that uses Playwright to extract hospi
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/demoscrap.git
-   cd demoscrap
+   cd GoogleReviewScrapper
    ```
 2. Install the required packages:
    ```bash
